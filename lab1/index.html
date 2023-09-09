@@ -1,12 +1,98 @@
 <!doctype html>
 <html>
     <head>
-        <title>This is the title of the webpage!</title>
+        <title>WEB. Lab 1</title>
     </head>
+
     <body>
         <header>
-            <h1>Персональный сайт Кристины Ветровой</h1>
-          </header>
-        <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+            <h1>Колмаков Дмитрий Владимирович</h1>
+            <h3>P3231 ИСУ:368328</h3>
+        </header>
+
+        <form method="GET" action="handler.php">
+            <table>
+                <tr>
+                    <td valign="top" width="25%">
+                        <p>Выберите значение X:</p>
+
+                        <input type="radio" id="x_minus_2" name="delta_x" value="-2">
+                        <label for="x_minus_2">-2</label>
+                        <br>
+
+                        <input type="radio" id="x_minus_1.5" name="delta_x" value="-1.5">
+                        <label for="x_minus_1.5">-1.5</label>
+                        <br>
+
+                        <input type="radio" id="x_minus_1" name="delta_x" value="-1">
+                        <label for="x_minus_1">-1</label>
+                        <br>
+
+                        <input type="radio" id="x_minus_0.5" name="delta_x" value="-0.5">
+                        <label for="x_minus_0.5">-0.5</label>
+                        <br>
+
+                        <input type="radio" id="x_zero" name="delta_x" value="0">
+                        <label for="x_zero">0</label>
+                        <br>
+
+                        <input type="radio" id="x_plus_0.5" name="delta_x" value="0.5">
+                        <label for="x_plus_0.5">0.5</label>
+                        <br>
+
+                        <input type="radio" id="x_plus_1" name="delta_x" value="1">
+                        <label for="x_plus_1">1</label>
+                        <br>
+
+                        <input type="radio" id="x_plus_1.5" name="delta_x" value="1.5">
+                        <label for="x_plus_1.5">1.5</label>
+                        <br>
+
+                        <input type="radio" id="x_plus_2" name="delta_x" value="2">
+                        <label for="x_plus_2">2</label>
+                    </td>
+
+                    <td valign="top" width="25%">
+                        <p>Введите значение Y:</p>
+                        <input type="text" id="delta_y" name="delta_y">
+                    </td>
+
+                    <td valign="top" width="25%">
+                        <p>Выберите значение Z:</p>
+
+                        <input type="checkbox" id="z_plus_1" name="delta_z" value="1">
+                        <label for="z_plus_1">1</label>
+                        <br>
+
+                        <input type="checkbox" id="z_plus_1.5" name="delta_z" value="1.5">
+                        <label for="z_plus_1.5">1.5</label>
+                        <br>
+
+                        <input type="checkbox" id="z_plus_2" name="delta_z" value="2">
+                        <label for="z_plus_2">2</label>
+                        <br>
+
+                        <input type="checkbox" id="z_plus_2.5" name="delta_z" value="2.5">
+                        <label for="z_plus_2.5">2.5</label>
+                        <br>
+
+                        <input type="checkbox" id="z_plus_3" name="delta_z" value="3">
+                        <label for="z_plus_3">3</label>
+                    </td>
+
+                    <td valign="top" width="25%">
+                        <img src="./areas.png" alt="areas" width="100%">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="Отправить">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        
     </body>
 </html>

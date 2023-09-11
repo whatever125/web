@@ -41,6 +41,7 @@ if (isset($_GET["delta_x"]) && isset($_GET["delta_y"]) && isset($_GET["delta_r"]
 
     $_SESSION["results"][] = $new_result;
 
+    header('Content-Type: application/json; charset=utf-8');
     echo json_encode(array(
         "html" => RenderTable()
     ));

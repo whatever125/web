@@ -1,6 +1,9 @@
 <!doctype html>
 
 <?php
+
+session_start();
+
 $delta_x = $delta_y = $delta_r = null;
 
 const table_head = "<table>

@@ -147,7 +147,7 @@ function test_input(float $delta_x, float $delta_y, float $delta_r): bool {
             </table>
         </form>
 
-        <?php RenderTable(); ?>
+        <?php echo RenderTable(); ?>
         
     </body>
 </html>

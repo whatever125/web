@@ -8,7 +8,7 @@ session_start();
 // define variables for new attempt
 $delta_x = $delta_y = $delta_r = null;
 
-// date_default_timezone_set("Europe/Moscow");
+date_default_timezone_set("Europe/Moscow");
 $current_time = date("H:i:s");
 $start_time = microtime(true);
 

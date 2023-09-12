@@ -38,13 +38,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $delta_y = floatval($_GET["delta_y"]);
         $delta_r = floatval($_GET["delta_r"]);
     
-        $execution_time = (microtime(true) - $start_time) * 1000;
+        $execution_time = (microtime(true) - $start_time) * pow(10, 6);
     
         $new_result = array(
             "delta_x" => $delta_x,
             "delta_y" => $delta_y,
             "delta_r" => $delta_r,
-            "success" => test_input($delta_x, $delta_y, $delta_r),
+            "success" => test_input($delta_x, $delta_y, $delta_r) ? "Попадание" : "Промах",
             "current_time" => $current_time,
             "execution_time" => $execution_time
         );

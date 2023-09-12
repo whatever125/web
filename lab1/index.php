@@ -55,10 +55,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
 // check if attempt was successful
 function test_input(float $delta_x, float $delta_y, float $delta_r): bool {
-    if ($delta_x > 0 && $delta_y < 0) {
+    if ($delta_x >= 0 && $delta_y <= 0) {
         return pow($delta_x, 2) + pow($delta_y, 2) <= pow($delta_r, 2);
     }
-    if ($delta_x < 0 && $delta_y > 0) {
+    if ($delta_x <= 0 && $delta_y >= 0) {
         return abs($delta_x) + abs($delta_y) <= $delta_r;
     }
     if ($delta_x < 0 && $delta_y < 0) {

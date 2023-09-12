@@ -6,17 +6,7 @@ session_start();
 
 $delta_x = $delta_y = $delta_r = null;
 
-const table_head = "<table>
-    <tr>
-        <th>X</th>
-        <th>Y</th>
-        <th>R</th>
-        <th>Результат</th>
-        <th>Текущее время</th>
-        <th>Время работы</th>
-    </tr>";
-const table_tail = "</table>";
-
+date_default_timezone_set("Europe/Moscow");
 $current_time = date("H:i:s");
 $start_time = microtime(true);
 
@@ -30,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $delta_y = floatval($_GET["delta_y"]);
         $delta_r = floatval($_GET["delta_r"]);
     
-        $execution_time = microtime(true) - $start_time;
+        $execution_time = (microtime(true) - $start_time) * 1000;
     
         $new_result = array(
             "delta_x" => $delta_x,
@@ -42,17 +32,20 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         );
     
         $_SESSION["results"][] = $new_result;
-    
-        /* header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(array(
-            "html" => RenderTable()
-        ));
-        exit(); */
     }
 }
 
 function test_input(float $delta_x, float $delta_y, float $delta_r): bool {
-    return true;
+    if ($delta_x > 0 && $delta_y < 0) {
+        return pow($delta_x, 2) + pow($delta_y, 2) <= pow($delta_r, 2);
+    }
+    if ($delta_x < 0 && $delta_y > 0) {
+        return abs($delta_x) + abs($delta_y) <= $delta_r;
+    }
+    if ($delta_x < 0 && $delta_y < 0) {
+        return (abs($delta_x) <= $delta_r / 2) && (abs($delta_y) <= $delta_r);
+    }
+    return false;
 }
 ?>
 
@@ -156,6 +149,19 @@ function test_input(float $delta_x, float $delta_y, float $delta_r): bool {
 </html>
 
 <?php
+
+const table_head = "<table>
+    <tr>
+        <th>X</th>
+        <th>Y</th>
+        <th>R</th>
+        <th>Результат</th>
+        <th>Текущее время</th>
+        <th>Время работы</th>
+    </tr>";
+
+const table_tail = "</table>";
+
 function RenderTable() : string {
     $final_table = "";
 

@@ -1,11 +1,5 @@
 <!doctype html>
 
-<script>    
-    if(typeof window.history.pushState == 'function') {
-        window.history.pushState({}, "Hide", '<?php echo $_SERVER['PHP_SELF'];?>');
-    }
-</script>
-
 <?php
 
 // start session
@@ -77,6 +71,11 @@ function test_input(float $delta_x, float $delta_y, float $delta_r): bool {
 <html>
     <head>
         <title>WEB. Lab 1</title>
+        <script>    
+            if(typeof window.history.pushState == 'function') {
+                window.history.pushState({}, "Hide", '<?php echo $_SERVER['PHP_SELF'];?>');
+            }
+        </script>
     </head>
 
     <body>

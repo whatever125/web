@@ -71,7 +71,8 @@ function test_input(float $delta_x, float $delta_y, float $delta_r): bool {
 <html>
     <head>
         <title>WEB. Lab 1</title>
-        <script>    
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
+        <script>
             if(typeof window.history.pushState == 'function') {
                 window.history.pushState({}, "Hide", '<?php echo $_SERVER['PHP_SELF'];?>');
             }
@@ -92,35 +93,27 @@ function test_input(float $delta_x, float $delta_y, float $delta_r): bool {
 
                         <input type="radio" id="x_minus_2" name="delta_x" value="-2">
                         <label for="x_minus_2">-2</label>
-                        <br>
 
                         <input type="radio" id="x_minus_1.5" name="delta_x" value="-1.5">
                         <label for="x_minus_1.5">-1.5</label>
-                        <br>
 
                         <input type="radio" id="x_minus_1" name="delta_x" value="-1">
                         <label for="x_minus_1">-1</label>
-                        <br>
 
                         <input type="radio" id="x_minus_0.5" name="delta_x" value="-0.5">
                         <label for="x_minus_0.5">-0.5</label>
-                        <br>
 
                         <input type="radio" id="x_zero" name="delta_x" value="0">
                         <label for="x_zero">0</label>
-                        <br>
 
                         <input type="radio" id="x_plus_0.5" name="delta_x" value="0.5">
                         <label for="x_plus_0.5">0.5</label>
-                        <br>
 
                         <input type="radio" id="x_plus_1" name="delta_x" value="1">
                         <label for="x_plus_1">1</label>
-                        <br>
 
                         <input type="radio" id="x_plus_1.5" name="delta_x" value="1.5">
                         <label for="x_plus_1.5">1.5</label>
-                        <br>
 
                         <input type="radio" id="x_plus_2" name="delta_x" value="2">
                         <label for="x_plus_2">2</label>
@@ -136,26 +129,22 @@ function test_input(float $delta_x, float $delta_y, float $delta_r): bool {
 
                         <input type="checkbox" id="r_plus_1" name="delta_r" value="1">
                         <label for="r_plus_1">1</label>
-                        <br>
 
                         <input type="checkbox" id="r_plus_1.5" name="delta_r" value="1.5">
                         <label for="r_plus_1.5">1.5</label>
-                        <br>
 
                         <input type="checkbox" id="r_plus_2" name="delta_r" value="2">
                         <label for="r_plus_2">2</label>
-                        <br>
 
                         <input type="checkbox" id="r_plus_2.5" name="delta_r" value="2.5">
                         <label for="r_plus_2.5">2.5</label>
-                        <br>
 
                         <input type="checkbox" id="r_plus_3" name="delta_r" value="3">
                         <label for="r_plus_3">3</label>
                     </td>
 
                     <td valign="top" width="25%">
-                        <img src="./areas.png" alt="areas" width="100%">
+                        <img src="./images/areas.png" alt="areas" width="100%">
                     </td>
                 </tr>
 

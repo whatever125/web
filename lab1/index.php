@@ -2,19 +2,37 @@
 
 <?php
 
+// start session
 session_start();
 
+// define variables for new attempt
 $delta_x = $delta_y = $delta_r = null;
 
 date_default_timezone_set("Europe/Moscow");
 $current_time = date("H:i:s");
 $start_time = microtime(true);
 
+// define constants for table generation
+const table_head = "<table>
+    <tr>
+        <th>X</th>
+        <th>Y</th>
+        <th>R</th>
+        <th>Результат</th>
+        <th>Текущее время</th>
+        <th>Время работы</th>
+    </tr>";
+
+const table_tail = "</table>";
+
+
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    // add empty array for new session
     if (!isset($_SESSION["results"])) {
         $_SESSION["results"] = array();
     }
 
+    // add new attempt to the session array
     if (isset($_GET["delta_x"]) && isset($_GET["delta_y"]) && isset($_GET["delta_r"])) {
         $delta_x = floatval($_GET["delta_x"]);
         $delta_y = floatval($_GET["delta_y"]);
@@ -35,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     }
 }
 
+// check if attempt was successful
 function test_input(float $delta_x, float $delta_y, float $delta_r): bool {
     if ($delta_x > 0 && $delta_y < 0) {
         return pow($delta_x, 2) + pow($delta_y, 2) <= pow($delta_r, 2);
@@ -143,25 +162,14 @@ function test_input(float $delta_x, float $delta_y, float $delta_r): bool {
             </table>
         </form>
 
+        <!-- add rendered table -->
         <?php echo RenderTable(); ?>
         
     </body>
 </html>
 
 <?php
-
-const table_head = "<table>
-    <tr>
-        <th>X</th>
-        <th>Y</th>
-        <th>R</th>
-        <th>Результат</th>
-        <th>Текущее время</th>
-        <th>Время работы</th>
-    </tr>";
-
-const table_tail = "</table>";
-
+// render table using session data
 function RenderTable() : string {
     $final_table = "";
 

@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $delta_y = floatval($_GET["delta_y"]);
         $delta_r = floatval($_GET["delta_r"]);
     
-        $execution_time = (microtime(true) - $start_time) * pow(10, 6);
+        $execution_time = round((microtime(true) - $start_time) * pow(10, 6), 2);
     
         $new_result = array(
             "delta_x" => $delta_x,

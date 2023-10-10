@@ -1,7 +1,14 @@
 /* NORMALIZATION */
-*, *::before, 
+*, 
+*::before, 
 *::after {
     box-sizing: border-box;
+}
+
+/* change selection color */
+::selection {
+    color: white;
+    background: #f9b17a;
 }
 
 /* BODY */
@@ -45,7 +52,7 @@ form p {
 input[type="text"] {
     width: 75%;
     height: calc(2em + 2px);
-    padding: 0.375rem 0.75rem;
+    padding: 7.5% 5%;
     font-family: inherit;
     font-size: 1rem;
     font-weight: 400;
@@ -56,6 +63,7 @@ input[type="text"] {
     border: 1px solid #f9b17a;
     border-radius: 0.25rem;
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 1%;
 }
 #y-helper-text {
     font-size: small;
@@ -71,6 +79,7 @@ input[type="checkbox"] {
     position: absolute;
     z-index: -1;
     opacity: 0;
+    margin-bottom: 5%;
 }
 /* для элемента label связанного с checkbox */
 input[type="checkbox"]+label {
@@ -105,6 +114,7 @@ input[type="radio"] {
     position: absolute;
     z-index: -1;
     opacity: 0;
+    margin-bottom: 5%;
 }
 /* для элемента label связанного с radio button */
 input[type="radio"]+label {

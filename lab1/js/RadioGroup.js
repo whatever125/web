@@ -25,6 +25,22 @@ export default class RadioGroup {
             })
         });
     }
+
+    setValidityMessage(id, message) {
+        let radioButton = this.radioButtons[id];
+        radioButton.setCustomValidity(message);
+        radioButton.reportValidity();
+    }
+
+    isAnyChecked() {
+        let isChecked = false;
+        this.radioButtons.forEach(button => {
+            if (button.checked) {
+                isChecked = true;
+            }
+        });
+        return isChecked;
+    }
  
     get groupName() {
         return this.groupName;

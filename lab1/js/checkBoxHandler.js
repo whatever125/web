@@ -8,10 +8,9 @@ export function selectOnlyThis(element) {
     group.clearExcpetID(element.id);
     canvas.clear();
     if (element.checked) {
-        canvas.drawAreas(parseFloat(element.value));
+        canvas.setRadius(parseFloat(element.value));
     } else {
-        // myCheckbox[4].setCustomValidity("Please choose box");
-        // myCheckbox[4].reportValidity();
+        canvas.setRadius(0);
     }
-    canvas.drawGrid();
+    canvas.redraw();
 }

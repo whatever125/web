@@ -3,16 +3,18 @@ export default class Canvas {
     canvas;
     width;
     height;
+    radius;
 
     constructor(id) {
         this.id = id;
         this.canvas = document.getElementById(id);
         this.width = this.canvas.width;
         this.height = this.canvas.height;
+        this.radius = 3;
     }
 
     define() {
-        this.width = window.innerWidth * 0.2;
+        this.width = window.innerWidth * 3 / 16;
         this.height = this.width;
 
         canvas.width = this.width;
@@ -24,12 +26,21 @@ export default class Canvas {
         context.clearRect(0, 0, this.width, this.height);
     }
 
-    drawAreas(r) {
+    setRadius(r) {
+        this.radius = r;
+    }
+
+    redraw() {
+        this.drawAreas();
+        this.drawGrid();
+    }
+
+    drawAreas() {
         var ctx = this.canvas.getContext('2d');
 
         // ctx.c
 
-        var r_pc = (r / 3) * 0.4;
+        var r_pc = (this.radius / 3) * 0.4;
         ctx.lineWidth = this.width * 2 / 300;
 
         // blue areas

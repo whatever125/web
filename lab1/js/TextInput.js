@@ -22,4 +22,9 @@ export default class TextInput {
     get name() {
         return this.name;
     }
+
+    setValidityMessage(message) {
+        this.input.setCustomValidity(message);
+        this.input.reportValidity();
+    }
 }

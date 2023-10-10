@@ -42,7 +42,7 @@ export default class CheckboxGroup {
             if (checkbox.checked) {
                 isChecked = true;
             }
-        });    
+        });
         return isChecked;
     }
 
@@ -60,6 +60,10 @@ export default class CheckboxGroup {
     setValidityMessage(id, message) {
         this.checkboxes[id].setCustomValidity(message);
         this.checkboxes[id].reportValidity();
+    }
+
+    select(id) {
+        this.checkboxes[id].checked = true;
     }
  
     get groupName() {

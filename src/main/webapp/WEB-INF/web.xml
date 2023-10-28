@@ -6,12 +6,12 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
-    <servlet-name>index</servlet-name>
+    <servlet-name>hello</servlet-name>
     <servlet-class>HelloWorldServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>index</servlet-name>
-    <url-pattern>/index</url-pattern>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello</url-pattern>
   </servlet-mapping>
 </web-app>

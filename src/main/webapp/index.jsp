@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!doctype html>
 
@@ -22,51 +23,51 @@
             <!-- <span id="clock"></span> -->
         </header>
 
-        <form id="queryForm">
+        <form id="queryForm" method="GET" action="controller">
             <table id="userInputTable">
                 <tr class="form-tr">
                     <td class="form-td" id="formFirstColumn">
                         <p>Выберите значение <strong>X</strong>:</p>
 
-                        <input type="radio" id="x_minus_2" name="delta_x" value="-2">
+                        <input type="radio" id="x_minus_2" name="x" value="-2">
                         <label for="x_minus_2">-2</label>
                         <br>
 
-                        <input type="radio" id="x_minus_1.5" name="delta_x" value="-1.5">
+                        <input type="radio" id="x_minus_1.5" name="x" value="-1.5">
                         <label for="x_minus_1.5">-1.5</label>
                         <br>
 
-                        <input type="radio" id="x_minus_1" name="delta_x" value="-1">
+                        <input type="radio" id="x_minus_1" name="x" value="-1">
                         <label for="x_minus_1">-1</label>
                         <br>
 
-                        <input type="radio" id="x_minus_0.5" name="delta_x" value="-0.5">
+                        <input type="radio" id="x_minus_0.5" name="x" value="-0.5">
                         <label for="x_minus_0.5">-0.5</label>
                         <br>
 
-                        <input type="radio" id="x_zero" name="delta_x" value="0">
+                        <input type="radio" id="x_zero" name="x" value="0">
                         <label for="x_zero">0</label>
                         <br>
 
-                        <input type="radio" id="x_plus_0.5" name="delta_x" value="0.5">
+                        <input type="radio" id="x_plus_0.5" name="x" value="0.5">
                         <label for="x_plus_0.5">0.5</label>
                         <br>
 
-                        <input type="radio" id="x_plus_1" name="delta_x" value="1">
+                        <input type="radio" id="x_plus_1" name="x" value="1">
                         <label for="x_plus_1">1</label>
                         <br>
 
-                        <input type="radio" id="x_plus_1.5" name="delta_x" value="1.5">
+                        <input type="radio" id="x_plus_1.5" name="x" value="1.5">
                         <label for="x_plus_1.5">1.5</label>
                         <br>
 
-                        <input type="radio" id="x_plus_2" name="delta_x" value="2">
+                        <input type="radio" id="x_plus_2" name="x" value="2">
                         <label for="x_plus_2">2</label>
                     </td>
 
                     <td class="form-td">
-                        <p><label for="delta_y">Введите значение <strong>Y</strong>:</label></p>
-                        <input type="text" id="delta_y" name="delta_y" maxlength="10" required
+                        <p><label for="y">Введите значение <strong>Y</strong>:</label></p>
+                        <input type="text" id="y" name="y" maxlength="10" required
                             pattern="^\s*(?:(-0*[0-4]?(?:[\.,][0-9]*)?)|(-0*5)|(\+?0*[0-2]?(?:[\.,][0-9]*)?)|(\+?0*3))\s*$"
                             oninvalid="this.setCustomValidity('Введите число, удовлетворяющее условиям')"
                             oninput="this.setCustomValidity('')">
@@ -77,23 +78,23 @@
                     <td class="form-td">
                         <p>Выберите значение <strong>R</strong>:</p>
 
-                        <input type="checkbox" id="r_plus_1" name="delta_r" value="1">
+                        <input type="checkbox" id="r_plus_1" name="r" value="1">
                         <label for="r_plus_1">1</label>
                         <br>
 
-                        <input type="checkbox" id="r_plus_1.5" name="delta_r" value="1.5">
+                        <input type="checkbox" id="r_plus_1.5" name="r" value="1.5">
                         <label for="r_plus_1.5">1.5</label>
                         <br>
 
-                        <input type="checkbox" id="r_plus_2" name="delta_r" value="2">
+                        <input type="checkbox" id="r_plus_2" name="r" value="2">
                         <label for="r_plus_2">2</label>
                         <br>
 
-                        <input type="checkbox" id="r_plus_2.5" name="delta_r" value="2.5">
+                        <input type="checkbox" id="r_plus_2.5" name="r" value="2.5">
                         <label for="r_plus_2.5">2.5</label>
                         <br>
 
-                        <input type="checkbox" id="r_plus_3" name="delta_r" value="3">
+                        <input type="checkbox" id="r_plus_3" name="r" value="3">
                         <label for="r_plus_3">3</label>
                     </td>
 
@@ -102,7 +103,7 @@
                     </td>
                 </tr>
             </table>
-            
+
             <table id="submitTable">
                 <tr class="form-submit-tr">
                     <td class="form-submit-td">
@@ -112,20 +113,8 @@
                 </tr>
             </table>
         </form>
-        
-        <table id="resultsTable">
-            <thead>
-                <tr>
-                    <th>X</th>
-                    <th>Y</th>
-                    <th>R</th>
-                    <th>Результат</th>
-                    <th>Текущее время</th>
-                    <th>Время работы</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+
+        <jsp:include page="resultsTable.jsp"/>
 
     </body>
 </html>

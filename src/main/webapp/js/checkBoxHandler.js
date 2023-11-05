@@ -2,7 +2,7 @@ import CheckboxGroup from './CheckboxGroup.js';
 import Canvas from './Canvas.js';
 
 export function selectOnlyThis(element) {
-    const group = new CheckboxGroup("delta_r");
+    const group = new CheckboxGroup("r");
     const canvas = new Canvas("canvas");
 
     group.clearExcpetID(element.id);

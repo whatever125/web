@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const queryForm = document.getElementById("queryForm");
     const clearButton = document.getElementById("clearButton");
     
-    const radioGroup = new RadioGroup("delta_x");
-    const textInput = new TextInput("delta_y");
-    const checkboxGroup = new CheckboxGroup("delta_r");
+    const radioGroup = new RadioGroup("x");
+    const textInput = new TextInput("y");
+    const checkboxGroup = new CheckboxGroup("r");
     const customStorage = new CustomStorage();
 
     // define canvas, draw grid
@@ -34,53 +34,53 @@ document.addEventListener("DOMContentLoaded", function () {
     radioGroup.defineCustomValidity();
 
     // Display initial previous results
-    let previousResults = customStorage.getResults();
-    displayResults(previousResults);
+    // let previousResults = customStorage.getResults();
+    // displayResults(previousResults);
 
     // clear button
-    clearButton.addEventListener("click", function (e) {
-        customStorage.clear();
-        displayResults(customStorage.getResults());
-    });
+    // clearButton.addEventListener("click", function (e) {
+    //     customStorage.clear();
+    //     displayResults(customStorage.getResults());
+    // });
 
     // handle form submit
-    queryForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        // If none of the radioButtons is checked, set custom validity message and return false to prevent form submission
-        if (!radioGroup.isAnyChecked()) {
-            radioGroup.setValidityMessage(0, "Выберите одно из значений");
-            return false;
-        }
-        // If none of the checkboxes is checked, set custom validity message and return false to prevent form submission
-        if (!checkboxGroup.isAnyChecked()) {
-            checkboxGroup.setValidityMessage(0, "Выберите одно из значений");
-            return false;
-        }
-
-        // Get user input
-        const delta_x = radioGroup.getSelectedValue().trim().replace(",", ".");
-        const delta_y = textInput.getValue().trim().replace(",", ".");
-        const delta_r = checkboxGroup.getSelectedValues()[0].trim().replace(",", ".");
-
-        // validte input
-        if (!Validator.isValidX(delta_x)) {
-            radioGroup.setValidityMessage(0, 'X не удовлетворяет условию (-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2)');
-            return false;
-        }
-        if (!Validator.isValidY(delta_y)) {
-            textInput.setValidityMessage('Y не удовлетворяет условию (-5 <= y <= 3)');
-            return false;
-        }
-        if (!Validator.isValidR(delta_r)) {
-            checkboxGroup.setValidityMessage(0, "R не удовлетворяет условию (1, 1.5, 2, 2.5, 3)");
-            return false;
-        }
-
-        sendAjaxGetRequest(delta_x, delta_y, delta_r);
-
-        return true;
-    });
+    // queryForm.addEventListener("submit", function (e) {
+    //     e.preventDefault();
+    //
+    //     // If none of the radioButtons is checked, set custom validity message and return false to prevent form submission
+    //     if (!radioGroup.isAnyChecked()) {
+    //         radioGroup.setValidityMessage(0, "Выберите одно из значений");
+    //         return false;
+    //     }
+    //     // If none of the checkboxes is checked, set custom validity message and return false to prevent form submission
+    //     if (!checkboxGroup.isAnyChecked()) {
+    //         checkboxGroup.setValidityMessage(0, "Выберите одно из значений");
+    //         return false;
+    //     }
+    //
+    //     // Get user input
+    //     const x = radioGroup.getSelectedValue().trim().replace(",", ".");
+    //     const y = textInput.getValue().trim().replace(",", ".");
+    //     const r = checkboxGroup.getSelectedValues()[0].trim().replace(",", ".");
+    //
+    //     // validte input
+    //     if (!Validator.isValidX(x)) {
+    //         radioGroup.setValidityMessage(0, 'X не удовлетворяет условию (-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2)');
+    //         return false;
+    //     }
+    //     if (!Validator.isValidY(y)) {
+    //         textInput.setValidityMessage('Y не удовлетворяет условию (-5 <= y <= 3)');
+    //         return false;
+    //     }
+    //     if (!Validator.isValidR(r)) {
+    //         checkboxGroup.setValidityMessage(0, "R не удовлетворяет условию (1, 1.5, 2, 2.5, 3)");
+    //         return false;
+    //     }
+    //
+    //     sendAjaxGetRequest(delta_x, delta_y, delta_r);
+    //
+    //     return true;
+    // });
 
     function sendAjaxGetRequest(delta_x, delta_y, delta_r) {
         // Construct the URL with query parameters

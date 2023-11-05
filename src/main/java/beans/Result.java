@@ -68,4 +68,16 @@ public class Result implements Serializable {
     public void setExecutionTime(long executionTime) {
         this.executionTime = executionTime;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"x\":" + x +
+                ", \"y\":" + y +
+                ", \"r\":" + r +
+                ", \"success\":" + success +
+                ", \"dateTime\":\"" + dateTime + "\"" +
+                ", \"executionTime\":" + executionTime +
+                "}";
+    }
 }

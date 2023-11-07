@@ -1,18 +1,19 @@
 package beans;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 public class Result implements Serializable {
-    private double x;
-    private double y;
-    private double r;
+    private BigDecimal x;
+    private BigDecimal y;
+    private BigDecimal r;
     private boolean success;
     private String dateTime;
     private long executionTime;
 
     public Result() {}
 
-    public Result(double x, double y, double r, boolean success, String dateTime, long executionTime) {
+    public Result(BigDecimal x, BigDecimal y, BigDecimal r, boolean success, String dateTime, long executionTime) {
         this.x = x;
         this.y = y;
         this.r = r;
@@ -21,27 +22,27 @@ public class Result implements Serializable {
         this.executionTime = executionTime;
     }
 
-    public double getX() {
+    public BigDecimal getX() {
         return x;
     }
 
-    public void setX(double x) {
+    public void setX(BigDecimal x) {
         this.x = x;
     }
 
-    public double getY() {
+    public BigDecimal getY() {
         return y;
     }
 
-    public void setY(double y) {
+    public void setY(BigDecimal y) {
         this.y = y;
     }
 
-    public double getR() {
+    public BigDecimal getR() {
         return r;
     }
 
-    public void setR(double r) {
+    public void setR(BigDecimal r) {
         this.r = r;
     }
 

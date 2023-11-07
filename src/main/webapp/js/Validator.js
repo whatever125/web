@@ -12,6 +12,6 @@ export default class Validator {
     }
 
     static isValidR(r) {
-        return this.isNumber(r) && [1, 1.5, 2, 2.5, 3].includes(Number(r));
+        return this.isNumber(r) && [1, 2, 3, 4, 5].includes(Number(r));
     }
 }

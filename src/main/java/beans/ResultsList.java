@@ -11,7 +11,7 @@ public class ResultsList implements Serializable {
     }
 
     public void add(Result result) {
-        this.results.add(result);
+        this.results.add(0, result);
     }
 
     public LinkedList<Result> getResults() {

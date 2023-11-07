@@ -1,35 +1,54 @@
 package utils;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
 public class InputValidator {
-    private final double x;
-    private final double y;
-    private final double r;
+    private final BigDecimal x;
+    private final BigDecimal y;
+    private final BigDecimal r;
 
-    public InputValidator(double x, double y, double r)
-    {
+    public InputValidator(BigDecimal x, BigDecimal y, BigDecimal r) {
         this.x = x;
         this.y = y;
         this.r = r;
     }
 
     public boolean isValid() {
-        return this.checkX() && this.checkY() && this.checkR();
+        return checkX() && checkY() && checkR();
     }
 
     private boolean checkX() {
-        List<Double> validXValues = Arrays.asList(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0);
-        return validXValues.contains(this.x);
+        List<BigDecimal> validXValues = Arrays.asList(
+                new BigDecimal("-2.0"), new BigDecimal("-1.5"), new BigDecimal("-1.0"),
+                new BigDecimal("-0.5"), new BigDecimal("0.0"), new BigDecimal("0.5"),
+                new BigDecimal("1.0"), new BigDecimal("1.5"), new BigDecimal("2.0")
+        );
+        for (BigDecimal validX : validXValues) {
+            if (validX.compareTo(this.x) == 0) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private boolean checkY() {
-        return this.y >= -5 && this.y <= 3;
+        BigDecimal minY = new BigDecimal("-5.0");
+        BigDecimal maxY = new BigDecimal("3.0");
+        return this.y.compareTo(minY) >= 0 && this.y.compareTo(maxY) <= 0;
     }
 
     private boolean checkR() {
-        List<Integer> validRValues = Arrays.asList(1, 2, 3, 4, 5);
-        return (this.r == (int) this.r) && validRValues.contains((int) this.r);
+        List<BigDecimal> validRValues = Arrays.asList(
+                new BigDecimal("1.0"), new BigDecimal("2.0"), new BigDecimal("3.0"),
+                new BigDecimal("4.0"), new BigDecimal("5.0")
+        );
+        for (BigDecimal validR : validRValues) {
+            if (validR.compareTo(this.r) == 0) {
+                return true;
+            }
+        }
+        return false;
     }
 }

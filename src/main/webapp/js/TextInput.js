@@ -18,10 +18,6 @@ export default class TextInput {
     setValue(value) {
         this.input.value = value;
     }
- 
-    get name() {
-        return this.name;
-    }
 
     setValidityMessage(message) {
         this.input.setCustomValidity(message);

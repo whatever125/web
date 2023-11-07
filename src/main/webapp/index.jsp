@@ -6,7 +6,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title>WEB. Lab 1</title>
+        <title>WEB. Lab 2</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,33 +73,21 @@
                             oninput="this.setCustomValidity('')">
                         <br>
                         <span id="y-helper-text">Введите число от -5 до 3</span>
-                    </td>
-
-                    <td class="form-td">
-                        <p>Выберите значение <strong>R</strong>:</p>
-
-                        <input type="checkbox" id="r_plus_1" name="r" value="1">
-                        <label for="r_plus_1">1</label>
                         <br>
 
-                        <input type="checkbox" id="r_plus_1.5" name="r" value="1.5">
-                        <label for="r_plus_1.5">1.5</label>
-                        <br>
-
-                        <input type="checkbox" id="r_plus_2" name="r" value="2">
-                        <label for="r_plus_2">2</label>
-                        <br>
-
-                        <input type="checkbox" id="r_plus_2.5" name="r" value="2.5">
-                        <label for="r_plus_2.5">2.5</label>
-                        <br>
-
-                        <input type="checkbox" id="r_plus_3" name="r" value="3">
-                        <label for="r_plus_3">3</label>
+                        <p class="label-r"><label for="r">Выберите значение <strong>R</strong>:</label></p>
+                        <select name="r" id="r" required title="Please select an option">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                     </td>
 
                     <td class="form-td">
                         <canvas id="canvas"></canvas>
+                        <div id="imsg" style="font-weight:700;color:#ff5275"></div>
                     </td>
                 </tr>
             </table>
@@ -108,7 +96,7 @@
                 <tr class="form-submit-tr">
                     <td class="form-submit-td">
                         <input type="submit" id="submitButton" class="submit-button" value="Отправить">
-                        <input type="button" id="clearButton" class="submit-button secondary" value="Очистить">
+<%--                        <input type="button" id="clearButton" class="submit-button secondary" value="Очистить">--%>
                     </td>
                 </tr>
             </table>

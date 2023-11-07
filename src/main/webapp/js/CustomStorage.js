@@ -1,24 +1,33 @@
 export default class CustomStorage {
-    storage = localStorage;
-
     constructor() {
-        
-    }
-
-    getResults() {
-        const resultsJSON = this.storage.getItem("results");
-        return resultsJSON ? JSON.parse(resultsJSON) : [];
-    }
-
-    saveResults(results) {
-        const resultsJSON = JSON.stringify(results);
-        this.storage.setItem("results", resultsJSON);
+        this.storage = sessionStorage;
+        // this.storage = new Map();
     }
 
     addResult(result) {
         let previousResults = this.getResults();
         previousResults.push(result);
         this.saveResults(previousResults);
+    }
+
+    getResults() {
+        const resultsJSON = this.get("results");
+        return resultsJSON ? JSON.parse(resultsJSON) : [];
+    }
+
+    saveResults(results) {
+        const resultsJSON = JSON.stringify(results);
+        this.push("results", resultsJSON);
+    }
+
+    get(key) {
+        return this.storage.getItem(key);
+        // return this.storage.get(key);
+    }
+
+    push(key, value) {
+        this.storage.setItem(key, value);
+        // this.storage.set(key, value);
     }
 
     clear() {

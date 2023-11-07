@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -51,10 +52,13 @@ public class AreaCheckServlet extends HttpServlet {
             long startTime = System.currentTimeMillis();
 
             // Retrieve the parameters
-            double x = Double.parseDouble(request.getParameter("x"));
-            double y = Double.parseDouble(request.getParameter("y"));
-            double r = Double.parseDouble(request.getParameter("r"));
+            BigDecimal x = new BigDecimal(request.getParameter("x").trim().replace(",", "."));
+            BigDecimal y = new BigDecimal(request.getParameter("y").trim().replace(",", "."));
+            BigDecimal r = new BigDecimal(request.getParameter("r").trim().replace(",", "."));
 
+            System.out.println(x);
+            System.out.println(y);
+            System.out.println(r);
             // Validate input data
             InputValidator validator = new InputValidator(x, y, r);
             if (!validator.isValid()) {

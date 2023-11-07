@@ -18,6 +18,7 @@ body {
     font-family: 'Montserrat';
     font-weight: 400;
     margin: 0;
+    padding-bottom: 50px;
 }
 
 /* HEADER */
@@ -48,9 +49,9 @@ form p {
 
 /* TEXT INPUT */
 input[type="text"] {
-    width: 75%;
+    width: 50%;
     height: calc(2em + 2px);
-    padding: 7.5% 5%;
+    padding: 5% 5%;
     font-family: inherit;
     font-size: 1rem;
     font-weight: 400;
@@ -142,6 +143,25 @@ input[type="radio"]:checked+label::before {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
+/* SELECT */
+/* Style the select element */
+select {
+    width: 50%;
+    height: calc(2em + 2px);
+    padding-left: 5%;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #424769;
+    background-clip: padding-box;
+    border: 1px solid #f9b17a;
+    border-radius: 0.25rem;
+}
+.label-r {
+    margin-top: 25px;
+}
+
 /* SUBMIT BUTTON */
 input[type="submit"], 
 input[type="button"] {
@@ -177,7 +197,7 @@ input[type="button"].secondary:hover {
     width: 100%;
 }
 .form-td {
-    width: 25%;
+    width: 33%;
     vertical-align: top;
 }
 #formFirstColumn {
@@ -207,7 +227,7 @@ body > table td, th {
     text-align: center;
 }
 .td-success {
-    color: #7fffd4;
+    color: #00AF54;
 }
 .td-fail {
     color: #ff5275;

@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Student</th>
+            <th>Mark</th>
+            <th>Date</th>
+        </tr>
+        <#list studentMarks?sort_by("date") as item>
+            <tr>
+                <td>${item.name}</td>
+                <td>${item.mark}</td>
+                <td>${item.date}</td>
+            </tr>
+        </#list>
+    </table>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Currency</th>
+                <th>Current Rate</th>
+                <th>Change</th>
+            </tr>
+            <tr th:each="currency : ${currencies}">
+                <th th:text="${currency.name}">Currency</th>
+                <th th:text="${currency.rate}">Current Rate</th>
+                <th th:text="${currency.change}">Change</th>
+            </tr>
+        </table>
+    </body>
+</html>

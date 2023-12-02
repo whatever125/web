@@ -1,0 +1,13 @@
+:not(.news) > a:visited {
+    color: yellow;
+}
+
+/* or */
+
+a:visited {
+    background-color: yellow;
+}
+
+.news a:visited {
+    background-color: initial; /* Вернуть начальный фон для ссылок внутри .news */
+}

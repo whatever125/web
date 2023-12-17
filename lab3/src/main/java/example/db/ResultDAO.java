@@ -40,6 +40,8 @@ public interface ResultDAO {
      */
     Collection<ResultEntity> getAllResults();
 
+    Collection<ResultEntity> getResultsBySessionId(String sessionId);
+
     /**
      * Deletes a specific result entity from the database.
      *
@@ -51,4 +53,6 @@ public interface ResultDAO {
      * Clears all result entities from the database.
      */
     void clearResults();
+
+    void clearSessionResults(String sessionId);
 }

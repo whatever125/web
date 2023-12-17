@@ -1,6 +1,3 @@
-# Custom
-src/main/resources/db.cfg
-
 # Environments, in case you would use them
 .env
 .venv

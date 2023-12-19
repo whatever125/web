@@ -10,7 +10,7 @@
 
     <h:head>
         <meta charset="UTF-8"/>
-        <title>WEB. Lab 2</title>
+        <title>WEB. Lab 3</title>
         <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -38,7 +38,10 @@
 
                             <p:spinner id="x" value="#{xBean.x}" stepFactor="0.1" min="-5" max="5"
                                        required="true"
-                                       requiredMessage="Выберите одно из значений"/>
+                                       requiredMessage="Выберите одно из значений">
+                                <f:validateDoubleRange minimum="-5" maximum="5"/>
+                                <f:ajax execute="x" render="@form" />
+                            </p:spinner>
 
                             <h:message for="x" errorStyle="color:#ff5275; display:block"/>
                             <br/>
@@ -52,6 +55,7 @@
                                          converterMessage="Введите число (-3 &#8804; y &#8804; 5)">
                                 <f:converter converterId="example.utils.CustomDoubleConverter"/>
                                 <f:validateDoubleRange minimum="-3" maximum="5"/>
+                                <f:ajax execute="y" render="@form" />
                             </h:inputText>
                             <h:message for="y" errorStyle="color:#ff5275; display:block"/>
                         </td>

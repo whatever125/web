@@ -19,11 +19,4 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class YBean implements Serializable {
     private Double y;
-
-    public void validateYBeanValue(Object o) {
-        if (o == null){
-            FacesMessage message = new FacesMessage("Input Y!");
-            throw new ValidatorException(message);
-        }
-    }
 }

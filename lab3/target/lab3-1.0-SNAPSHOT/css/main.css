@@ -181,3 +181,13 @@ body > table td, th {
 #timeForm {
     padding: 20px;
 }
+
+a, a:link {
+    color: #f9b17a;
+}
+a:hover, a:link:hover {
+    color: #f68d3c;
+}
+a:visited, a:link:visited {
+    color: #ba5302;
+}

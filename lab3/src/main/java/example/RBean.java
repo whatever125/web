@@ -1,9 +1,7 @@
 package example;
 
 import jakarta.enterprise.context.SessionScoped;
-import jakarta.faces.application.FacesMessage;
 import jakarta.faces.context.FacesContext;
-import jakarta.faces.validator.ValidatorException;
 import jakarta.inject.Named;
 import lombok.NoArgsConstructor;
 
@@ -19,13 +17,6 @@ import java.util.Locale;
 @NoArgsConstructor
 public class RBean implements Serializable {
     private Double r = 3.0;
-
-    public void validateRBeanValue(Object o) {
-        if (o == null){
-            FacesMessage message = new FacesMessage("Input R!");
-            throw new ValidatorException(message);
-        }
-    }
 
     public Double getR() {
         return r;

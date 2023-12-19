@@ -92,9 +92,7 @@ public class ResultsControllerBean implements Serializable {
         String sessionId = session.getId();
 
         results.removeIf(result -> result.getSessionId().equals(sessionId));
-        System.out.println("removed1");
         resultDAO.clearSessionResults(sessionId);
-        System.out.println("removed2");
 
         String script1 = "window.clearCanvas();";
         FacesContext.getCurrentInstance().getPartialViewContext().getEvalScripts().add(script1);

@@ -26,22 +26,22 @@ import java.util.Objects;
 @ApplicationScoped
 public class ResultEntity {
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private long id;
-    @Column(name = "session_id")
+    @Column(name = "session_id", nullable = false)
     private String sessionId;
-    @Column(name = "x")
+    @Column(name = "x", nullable = false)
     private double x;
-    @Column(name = "y")
+    @Column(name = "y", nullable = false)
     private double y;
-    @Column(name = "r")
+    @Column(name = "r", nullable = false)
     private double r;
-    @Column(name = "success")
+    @Column(name = "success", nullable = false)
     private boolean success;
-    @Column(name = "date_time")
+    @Column(name = "date_time", nullable = false)
     private ZonedDateTime dateTime;
-    @Column(name = "execution_time")
+    @Column(name = "execution_time", nullable = false)
     private long executionTime;
 
     @Override

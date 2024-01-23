@@ -1,0 +1,14 @@
+<app-header/>
+<div class="grid">
+  <div class="col">
+    <app-value-form [canvasComponent]="canvasComponent" #valueFormComponent (formSubmit)="formSubmit($event)" (rChanged)="rChanged($event)"/>
+  </div>
+  <div class="col">
+    <app-canvas #canvasComponent (clickEvent)="valueFormComponent.handleSubmit($event.x, $event.y)" [results]="results"/>
+  </div>
+</div>
+<div class="grid">
+  <div class="col">
+    <app-results-table [results]="results" (clearEvent)="clearResults()"/>
+  </div>
+</div>

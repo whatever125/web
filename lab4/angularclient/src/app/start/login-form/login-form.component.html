@@ -1,0 +1,56 @@
+<div *ngIf="!axiosService.isAuthenticated()" class="container">
+  <p-card class="myCard">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="p-fluid">
+        <div class="col-fixed">
+          <div class="p-field">
+            <label for="login">
+              Логин
+            </label>
+            <input type="text" pInputText id="login" formControlName="login" />
+            <small class="p-error"
+                   *ngIf="loginForm.get('login')?.hasError('required') && loginForm.get('login')?.touched && loginForm.get('login')?.dirty ">
+              Обязательное поле
+            </small>
+            <small class="p-error"
+                   *ngIf="loginForm.get('login')?.hasError('pattern') && loginForm.get('login')?.touched && loginForm.get('login')?.dirty">
+              Логин должен содержать от 3 до 20 символов: латинские символы, цифры или нижнее подчеркивание
+            </small>
+          </div>
+          <div class="p-field">
+            <label for="password">
+              Пароль
+            </label>
+            <p-password id="password" formControlName="password" [feedback]="false" [toggleMask]="true" />
+            <small class="p-error"
+                   *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched && loginForm.get('password')?.dirty">
+              Обязательное поле
+            </small>
+            <small class="p-error"
+                   *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched && loginForm.get('password')?.dirty">
+              Пароль должен содержать от 8 символов
+            </small>
+          </div>
+          <div class="buttons">
+            <div class="p-field">
+              <p-button type="submit" label="Войти" [disabled]="!loginForm.valid" (click)="buttonClicked='login'" />
+            </div>
+            <div class="p-field">
+              <p-button type="submit" label="Зарегистрироваться" [disabled]="!loginForm.valid" (click)="buttonClicked='register'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </p-card>
+</div>
+<div class="logout-container" *ngIf="axiosService.isAuthenticated()">
+  <p-card class="myCard">
+    <div class="p-field">
+      <h5>Текущий пользователь: <b>{{ axiosService.getUsername() }}</b></h5>
+    </div>
+    <div class="buttons">
+      <p-button type="submit" label="Выйти" itemid="registerButton" [rounded]="true" (click)="handleLogout()" />
+    </div>
+  </p-card>
+</div>

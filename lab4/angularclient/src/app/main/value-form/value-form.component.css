@@ -1,0 +1,39 @@
+.value-container {
+  display: flex;
+  justify-content: space-evenly;
+  /*margin-top: 10px;*/
+  /*margin-left: 0;*/
+  padding: 0;
+  flex-direction: row;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+.p-field {
+  margin: 15px;
+}
+
+@media (min-width: 1182px) {
+  .value-container {
+  }
+}
+
+/* Планшетный */
+@media (min-width: 840px) and (max-width: 1181px) {
+  .value-container {
+  }
+}
+
+/* Мобильный */
+@media (max-width: 839px) {
+  .value-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .p-field {
+    margin: 10px;
+  }
+}

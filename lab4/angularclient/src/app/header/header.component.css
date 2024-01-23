@@ -1,0 +1,5 @@
+@media (max-width: 839px) {
+  .header {
+    display: none;
+  }
+}

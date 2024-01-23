@@ -1,0 +1,11 @@
+security:
+  ignored:
+    - "*.bundle.*"
+  sessions: NEVER
+logging:
+  level:
+    org.springframework.security.web: DEBUG
+token:
+  signing:
+    key:
+      "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDYkNegMRa3R7vP"

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html lang="ru"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+    <h:head>
+        <meta charset="UTF-8"/>
+        <title>WEB. Lab 3</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&amp;display=swap"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <script type="module" src="js/main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+
+    <h:body>
+        <header>
+            <h1>Колмаков Дмитрий Владимирович</h1>
+            <h2>P3231 Вариант 1207</h2>
+            <!-- <span id="clock"></span> -->
+        </header>
+
+        <div class="hor-flex-parent">
+            <div class="hor-flex-child">
+                <h:form id="queryForm">
+                <table id="userInputTable">
+                    <tr class="form-tr">
+                        <td class="form-td">
+                            <h:outputLabel for="x">Выберите значение <strong>X</strong>:</h:outputLabel>
+                            <br/>
+
+                            <p:spinner id="x" value="#{xBean.x}" stepFactor="0.1" min="-5" max="5"
+                                       required="true"
+                                       requiredMessage="Выберите одно из значений">
+                                <f:validateDoubleRange minimum="-5" maximum="5"/>
+                                <f:ajax execute="x" render="@form" />
+                            </p:spinner>
+
+                            <h:message for="x" errorStyle="color:#ff5275; display:block"/>
+                            <br/>
+
+                            <h:outputLabel for="y">Введите значение <strong>Y</strong>:</h:outputLabel>
+                            <br/>
+                            <h:inputText id="y" value="#{yBean.y}" maxlength="10" required="true"
+                                         requiredMessage="Введите значение"
+                                         validatorMessage="Y не удовлетворяет условию (-3 &#8804; y &#8804; 5)"
+                                         a:placeholder="-3 &#8804; y &#8804; 5"
+                                         converterMessage="Введите число (-3 &#8804; y &#8804; 5)">
+                                <f:converter converterId="example.utils.CustomDoubleConverter"/>
+                                <f:validateDoubleRange minimum="-3" maximum="5"/>
+                                <f:ajax execute="y" render="@form" />
+                            </h:inputText>
+                            <h:message for="y" errorStyle="color:#ff5275; display:block"/>
+                        </td>
+
+                        <td class="form-td" id="formFirstColumn">
+                            <h:outputLabel styleClass="label-r">Выберите значение <strong>R</strong>: </h:outputLabel>
+                            <p:outputPanel id="selectedRValue">
+                                <h:outputLabel styleClass="label-r" value="#{rBean.r}"/>
+                            </p:outputPanel>
+                            <br/>
+
+                            <p:commandLink id="r1" actionListener="#{rBean.setR(1.0)}" immediate="true"
+                                           value="1" update="selectedRValue"/>
+                            <br/>
+                            <p:commandLink id="r1_5" actionListener="#{rBean.setR(1.5)}" immediate="true"
+                                           value="1.5" update="selectedRValue"/>
+                            <br/>
+                            <p:commandLink id="r2" actionListener="#{rBean.setR(2.0)}" immediate="true"
+                                           value="2" update="selectedRValue"/>
+                            <br/>
+                            <p:commandLink id="r2_5" actionListener="#{rBean.setR(2.5)}" immediate="true"
+                                           value="2.5" update="selectedRValue"/>
+                            <br/>
+                            <p:commandLink id="r3" actionListener="#{rBean.setR(3.0)}" immediate="true"
+                                           value="3" update="selectedRValue"/>
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="submitTable">
+                    <tr class="form-submit-tr">
+                        <td class="form-submit-td">
+                            <h:commandButton type="submit" id="submitButton" styleClass="submit-button" value="Отправить">
+                                <f:ajax execute="@form"
+                                        listener="#{resultsControllerBean.addResult(xBean.getX(), yBean.getY(), rBean.getR())}"
+                                        render="@form resultsTable canvas"
+                                />
+                            </h:commandButton>
+                            <h:commandButton type="button" id="clearButton" styleClass="submit-button secondary" value="Очистить" immediate="true">
+                                <f:ajax execute="@form"
+                                        listener="#{resultsControllerBean.clearSessionResults()}"
+                                        render="resultsTable"/>
+                            </h:commandButton>
+                        </td>
+                    </tr>
+                </table>
+            </h:form>
+            </div>
+            <div class="hor-flex-child">
+                <div class="ver-flex-parent">
+                    <div class="ver-flex-child">
+                        <canvas id="canvas"/>
+                    </div>
+                    <div class="ver-flex-child" id="imsg" style="font-weight:700;color:#ff5275">
+                        &#160;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h:dataTable id="resultsTable" var="result" value="#{resultsControllerBean.getSessionResults()}">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="X"/>
+                </f:facet>
+                <h:outputText value="#{result.x}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Y"/>
+                </f:facet>
+                <h:outputText value="#{result.y}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="R"/>
+                </f:facet>
+                <h:outputText value="#{result.r}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Результат"/>
+                </f:facet>
+                <h:outputText value="#{result.success ? 'Попадание' : 'Промах'}"
+                              styleClass="#{result.success ? 'td-success' : 'td-fail'}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Текущее время"/>
+                </f:facet>
+                <h:outputText value="#{result.dateTime}">
+                    <f:convertDateTime type="zonedDateTime" pattern="dd.MM.yyyy HH:mm"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Время работы"/>
+                </f:facet>
+                <h:outputText value="#{result.executionTime / 1000} ms"/>
+            </h:column>
+        </h:dataTable>
+
+        <h:form>
+            <div class="center">
+                <h:commandButton id="redirect" styleClass="redirect" action="goToIndex" value="INDEX" />
+            </div>
+        </h:form>
+
+        <h:form>
+            <p:remoteCommand name="onload" action="#{resultsControllerBean.updateCanvas()}" autoRun="true"/>
+        </h:form>
+
+        <h:form id="graphSelect">
+            <h:inputHidden id="graphX" value="#{selectGraphBean.x}" />
+            <h:inputHidden id="graphY" value="#{selectGraphBean.y}" />
+            <p:remoteCommand name="updateBeanValues" update="graphX graphY resultsTable"
+                             action="#{resultsControllerBean.addResult(selectGraphBean.x, selectGraphBean.y, rBean.r)}"/>
+        </h:form>
+    </h:body>
+</html>

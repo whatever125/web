@@ -5,49 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cae2049f-d674-4296-a875-71a9c132a77e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab2/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/error-pages/400.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/error-pages/403.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/error-pages/404.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/error-pages/500.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/error-pages/503.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/error-pages/error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/src/main/java/example/RBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/RBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/src/main/java/example/ResultsControllerBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/ResultsControllerBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/src/main/java/example/XBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/XBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/src/main/java/example/YBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/YBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/src/main/java/example/db/JPAUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/db/JPAUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/src/main/java/example/entity/ResultEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/java/example/entity/ResultEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/src/main/webapp/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/classes/example/RBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/classes/example/RBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/classes/example/ResultsControllerBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/classes/example/ResultsControllerBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/classes/example/TimeBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/classes/example/TimeBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/classes/example/XBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/classes/example/XBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/classes/example/YBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/classes/example/YBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/classes/example/db/JPAUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/classes/example/db/JPAUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/classes/example/entity/ResultEntity$ResultEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/classes/example/entity/ResultEntity$ResultEntityBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/classes/example/entity/ResultEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/classes/example/entity/ResultEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/RBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/RBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/ResultsControllerBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/ResultsControllerBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/TimeBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/TimeBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/XBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/XBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/YBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/YBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/db/JPAUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/db/JPAUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/entity/ResultEntity$ResultEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/entity/ResultEntity$ResultEntityBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/entity/ResultEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/classes/example/entity/ResultEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/faces-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/target/lab3-1.0-SNAPSHOT/main.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,9 +33,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "lab3",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/whatever125/Desktop/web/lab4",
+    "last_opened_file_path": "/Users/whatever125/Desktop/архив/web/lab4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,13 +46,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-18.0.2-corretto-18.0.2-3183f394aec4-229f571c" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,6 +57,7 @@
       <workItem from="1704919275896" duration="315000" />
       <workItem from="1704919598380" duration="25000" />
       <workItem from="1704919629029" duration="525000" />
+      <workItem from="1715351795800" duration="276000" />
     </task>
     <servers />
   </component>

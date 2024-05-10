@@ -1,3 +1,27 @@
+<p align="center">
+   <picture>
+      <img src="./resources/logo.ico" height="150">
+   </picture>
+   <h1 align="center">Лабораторная работа №2</h1>
+   <h2 align="center">Варинат №118273</h2>
+</p>
+
+<!-- Here are some cool labels for your project, delete those, that you don't need -->
+
+<p align="center">
+   <a aria-label="WildFly Version" href="https://www.wildfly.org/">
+      <img alt="" src="https://img.shields.io/badge/WildFly-21.0.0-50FA7B?style=for-the-badge&labelColor=000000&color=50FA7B">
+   </a>
+   <a aria-label="Java Version" href="https://www.oracle.com/java/technologies/javase-jdk17-downloads.html">
+      <img alt="" src="https://img.shields.io/badge/Java-18.0.2-FFD300?style=for-the-badge&labelColor=000000&color=FFD300">
+   </a>
+   <a aria-label="Maven Project" href="https://maven.apache.org/">
+      <img alt="" src="https://img.shields.io/badge/Maven-Project-FF69B4?style=for-the-badge&labelColor=000000&color=FF69B4">
+   </a>
+</p>
+
+### Текст задания
+
 Разработать веб-приложение на базе сервлетов и JSP, определяющее попадание точки на координатной плоскости в заданную область.
 
 Приложение должно быть реализовано в соответствии с [шаблоном MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) и состоять из следующих элементов:
@@ -23,4 +47,6 @@
 Ссылку на страницу с веб-формой для формирования нового запроса.
 Разработанное веб-приложение необходимо развернуть на сервере WildFly. Сервер должен быть запущен в standalone-конфигурации, порты должны быть настроены в соответствии с выданным portbase, доступ к http listener'у должен быть открыт для всех IP.
 
-![areas](/resources/areas.png)
+<p align="center">
+   <img src="./resources/full_areas.png" alt="areas" width="400"/>
+</p>

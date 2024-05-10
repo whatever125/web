@@ -10,29 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="692ff519-3ef7-4cb2-8b8b-60a285bdaf0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab1/lab1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/JBoss_WildFly_21_0_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/Selector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ResultsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ResultsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AreaCheckServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AreaCheckServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/InputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/PointChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/PointChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/Canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/Canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/CheckboxGroup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/CustomStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/CustomStorage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/TextInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/TextInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/Validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/Validator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/checkBoxHandler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +28,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -80,7 +60,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/whatever125/Desktop/web/lab2/src/main/webapp/js",
+    "last_opened_file_path": "/Users/whatever125/Desktop/архив/web/lab2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -188,13 +168,6 @@
       <item itemvalue="JBoss/WildFly Server.JBoss/WildFly 30.0.0.Final" />
     </list>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-18.0.2-corretto-18.0.2-1571ab7be1d6-e558857c" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -208,10 +181,22 @@
       <workItem from="1698953421300" duration="7490000" />
       <workItem from="1699093465050" duration="50000" />
       <workItem from="1699093668495" duration="68288000" />
+      <workItem from="1715351274531" duration="221000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
